@@ -1,5 +1,5 @@
 public interface AnimalsCan {
-    void AddCommand(String command);
+    void addCommand(String command);
     void getCommands();
 
 }

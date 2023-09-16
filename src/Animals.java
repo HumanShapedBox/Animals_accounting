@@ -13,4 +13,21 @@ public abstract class Animals implements AnimalsCan {
         this.type = type;
         this.commands = commands;
     }
+
+    @Override
+    public void getCommands() {
+        if(this.commands.isEmpty()){
+            System.out.printf("%s пока не знает никаких команд\n", this.name);
+        }else{
+            for (String command: this.commands) {
+                System.out.println(command);
+            }
+        }
+    }
+
+    @Override
+    public void addCommand(String command) {
+        this.commands.add(command);
+        System.out.printf("%s теперь знает команду '%s'\n", this.name, command);
+    }
 }
