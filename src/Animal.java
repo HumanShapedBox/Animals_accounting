@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Animals implements AnimalsCan {
+public abstract class Animal implements AnimalsCan {
 
     protected final String name;
     protected final String type;
@@ -8,7 +8,7 @@ public abstract class Animals implements AnimalsCan {
 
 
 
-    protected Animals(String name, String type, ArrayList<String> commands) {
+    public Animal(String name, String type, ArrayList<String> commands) {
         this.name = name;
         this.type = type;
         this.commands = commands;
@@ -30,4 +30,5 @@ public abstract class Animals implements AnimalsCan {
         this.commands.add(command);
         System.out.printf("%s теперь знает команду '%s'\n", this.name, command);
     }
+    // энум для типов, метод определения типа, присваивание типа в конструктореE
 }
