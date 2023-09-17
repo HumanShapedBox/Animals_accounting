@@ -5,6 +5,6 @@ import java.util.Random;
 
 public class Dog extends Pet{
     public Dog(String name) {
-        super(name, "собака", new ArrayList<String>(), new Random().nextInt(10));
+        super(name, "собака", new ArrayList<>(), new Random().nextInt(10));
     }
 }

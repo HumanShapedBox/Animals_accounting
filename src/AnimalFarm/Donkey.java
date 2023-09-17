@@ -5,6 +5,6 @@ import java.util.Random;
 
 public class Donkey extends PackAnimal{
     public Donkey(String name) {
-        super(name, "осёл", new ArrayList<String>(), new Random().nextInt(10));
+        super(name, "осёл", new ArrayList<>(), new Random().nextInt(10));
     }
 }

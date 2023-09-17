@@ -1,8 +1,8 @@
-public class Counter {
+public class AnimalCounter {
 
     int animalCounter;
 
-    public Counter(){
+    public AnimalCounter(){
         this.animalCounter = 0;
     }
 
