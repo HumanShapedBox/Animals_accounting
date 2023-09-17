@@ -1,3 +1,5 @@
+package AnimalFarm;
+
 import java.util.ArrayList;
 
 public abstract class Animal implements AnimalsCan {
