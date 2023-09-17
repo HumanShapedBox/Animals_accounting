@@ -60,13 +60,24 @@ public class NewAnimal {
             return userAnimal;
         }
 
+    private boolean checkNum(int num){
+        boolean flag = true;
+        if(num < 1 || num > 5){
+            System.out.println("Что-то пошло не так");
+            flag = false;
+        }
+        return flag;
+    }
+
         private void setAnimal(int userAnimal){
-            switch (userAnimal) {
-                case 1 -> yourAnimals.add(new Cat(setName()).toString());
-                case 2 -> yourAnimals.add(new Dog(setName()).toString());
-                case 3 -> yourAnimals.add(new Horse(setName()).toString());
-                default -> yourAnimals.add(new Donkey(setName()).toString());
-            }
+            if(checkNum(userAnimal)){
+                switch (userAnimal) {
+                    case 1 -> yourAnimals.add(new Cat(setName()).toString());
+                    case 2 -> yourAnimals.add(new Dog(setName()).toString());
+                    case 3 -> yourAnimals.add(new Horse(setName()).toString());
+                    default -> yourAnimals.add(new Donkey(setName()).toString());
+                }
+            }else setAnimal(numFromUserData(chooseAnimal()));
         }
 
 }
