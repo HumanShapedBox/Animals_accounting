@@ -30,5 +30,4 @@ public abstract class Animal implements AnimalsCan {
         this.commands.add(command);
         System.out.printf("%s теперь знает команду '%s'\n", this.name, command);
     }
-    // энум для типов, метод определения типа, присваивание типа в конструктореE
 }
