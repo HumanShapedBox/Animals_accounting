@@ -19,39 +19,43 @@ public class Controller {
 
     public void start(){
         chooseOperation();
-        while(true){
             if(checkNum(numFromUserData(operation))){
                 switch (numFromUserData(operation)){
                     case 1:{
                         animal.getNewAnimal();
+                        start();
                     }
                     case 2:{
+                        this.yourAnimals = animal.getAnimals();
                         for (Animal animal: yourAnimals) {
                             animal.getInfo();
                         }
+                        start();
                     }
                     case 3:{
+                        this.yourAnimals = animal.getAnimals();
                         skills.trainAnimal(yourAnimals);
+                        start();
                     }
                     case 4:{
+                        this.yourAnimals = animal.getAnimals();
                         skills.showWhatYouCan(yourAnimals);
+                        start();
                     }
                     default:{
                         System.out.println("Всего хорошего!");
-                        break;
                     }
                 }
             }
-        }
     }
 
     private void chooseOperation(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Привет! Что будем делать?\n+" +
-                "1 - Завести новое животное\n+" +
-                "2 - Посмотреть моих животных\n+" +
-                "3 - Обучить животное новой команде\n+" +
-                "4 - Посмотреть, что умеет животное\n+" +
+        System.out.println("Что будем делать?\n" +
+                "1 - Завести новое животное\n" +
+                "2 - Посмотреть моих животных\n" +
+                "3 - Обучить животное новой команде\n" +
+                "4 - Посмотреть, что умеет животное\n" +
                 "5 - Завершить");
         this.operation = sc.nextLine();
     }
