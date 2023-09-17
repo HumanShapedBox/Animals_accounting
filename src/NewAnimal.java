@@ -1,13 +1,10 @@
-import AnimalFarm.Cat;
-import AnimalFarm.Dog;
-import AnimalFarm.Donkey;
-import AnimalFarm.Horse;
+import AnimalFarm.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class NewAnimal {
-        ArrayList<String> yourAnimals;
+        ArrayList<Animal> yourAnimals;
         AnimalCounter counter;
 
         public NewAnimal(){
@@ -21,6 +18,7 @@ public class NewAnimal {
             counter.addAnimal();
         }
 
+        public ArrayList<Animal> getAnimals(){return this.yourAnimals;}
 
         private String setName(){
             Scanner sc = new Scanner(System.in);
@@ -72,10 +70,10 @@ public class NewAnimal {
         private void setAnimal(int userAnimal){
             if(checkNum(userAnimal)){
                 switch (userAnimal) {
-                    case 1 -> yourAnimals.add(new Cat(setName()).toString());
-                    case 2 -> yourAnimals.add(new Dog(setName()).toString());
-                    case 3 -> yourAnimals.add(new Horse(setName()).toString());
-                    default -> yourAnimals.add(new Donkey(setName()).toString());
+                    case 1 -> yourAnimals.add(new Cat(setName()));
+                    case 2 -> yourAnimals.add(new Dog(setName()));
+                    case 3 -> yourAnimals.add(new Horse(setName()));
+                    default -> yourAnimals.add(new Donkey(setName()));
                 }
             }else setAnimal(numFromUserData(chooseAnimal()));
         }
