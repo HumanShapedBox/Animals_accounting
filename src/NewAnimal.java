@@ -60,7 +60,7 @@ public class NewAnimal {
 
     private boolean checkNum(int num){
         boolean flag = true;
-        if(num < 1 || num > 5){
+        if(num < 1 || num > 4){
             System.out.println("Что-то пошло не так");
             flag = false;
         }

@@ -16,6 +16,10 @@ public abstract class Animal implements AnimalsCan {
         this.commands = commands;
     }
 
+    public String getInfo(){
+        return this.name + this.type;
+    }
+
     @Override
     public void getCommands() {
         if(this.commands.isEmpty()){
